@@ -1,0 +1,13 @@
+{
+  "name": "OMG-DiscordBOT",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^14.12.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.46.0"
+  }
+}
