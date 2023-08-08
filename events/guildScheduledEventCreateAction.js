@@ -6,8 +6,9 @@ module.exports = {
         let event = {
             header: guildScheduledEventCreate.name,
             description: guildScheduledEventCreate.description,
-            startTime: guildScheduledEventCreate.scheduledStartTime,
-            endTime: guildScheduledEventCreate.scheduledEndTime
+            startTime: new Date(guildScheduledEventCreate.scheduledStartTimestamp).toISOString(),
+            endTime: new Date(guildScheduledEventCreate.scheduledEndTimestamp).toISOString(),
+            location: guildScheduledEventCreate.entityMetadata.location
         }
         console.log(event);
     }
