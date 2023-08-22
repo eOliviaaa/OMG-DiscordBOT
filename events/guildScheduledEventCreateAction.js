@@ -4,7 +4,8 @@ const axios = require('axios').default;
 module.exports = {
     name: Events.GuildScheduledEventCreate,
     async execute(guildScheduledEventCreate) {
-        axios.post('http://172.20.64.1:8080/event/create', {
+        axios.post('http://localhost:8080/event/create', {
+            id: guildScheduledEventCreate.id,
             header: guildScheduledEventCreate.name,
             description: guildScheduledEventCreate.description,
             startTime: new Date(guildScheduledEventCreate.scheduledStartTimestamp).toISOString(),
